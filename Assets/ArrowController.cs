@@ -30,8 +30,12 @@ public class ArrowController : MonoBehaviour
 
         if(d < r1 + r2)
         {
-            //충돌한 경우, 화살을 지움
-            Destroy (gameObject);
+            //충돌한 경우, 화살을 지우고 체력을 깎는다.
+            GameObject director = GameObject.Find("GameDirector");
+            director.GetComponent<GameDirector>().DecreaseHp();
+
+            Destroy(gameObject);
+
         }
     }
 }
