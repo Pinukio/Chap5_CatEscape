@@ -18,7 +18,7 @@ public class ArrowController : MonoBehaviour
 
         if (transform.position.y < -10.0f)
         {
-            Destroy(gameObject);
+            Destroy(gameObject); //gameObject == arrow
         }
 
         Vector2 p1 = transform.position;
@@ -35,7 +35,6 @@ public class ArrowController : MonoBehaviour
             director.GetComponent<GameDirector>().DecreaseHp();
 
             Destroy(gameObject);
-
         }
     }
 }
